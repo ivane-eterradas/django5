@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuestas</title>
+</head>
+<body>
+    <h1>Últimas preguntas</h1>
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+                <li>{{ question.question_text }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay encuestas disponibles.</p>
+    {% endif %}
+</body>
+</html>
